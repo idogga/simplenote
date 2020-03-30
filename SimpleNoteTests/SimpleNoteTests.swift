@@ -42,26 +42,21 @@ class SimpleNoteTests: XCTestCase {
         XCTAssertTrue(s.isEmpty, "Сообщение дожно быть пустым")
     }
     
-    func testUnsuccesLenghtNotNumber(){
+    func testUnsuccesLenghtNotNumber() {
         let expect="Не является числом."
         let s = _validator!.validateLenght(lengthStr: "adsadadsad")
         XCTAssertEqual(s, expect)
     }
+    
     func testUnsuccesLenghtLess(){
         let expect="Возраст дожен быть больше 0."
         let s = _validator!.validateLenght(lengthStr: "-1")
         XCTAssertEqual(s, expect)
     }
+    
     func testUnsuccesLenghtMore(){
         let expect="Слишком большая высота."
         let s = _validator!.validateLenght(lengthStr: "201")
         XCTAssertEqual(s, expect)
     }
-
-    func testNamePerformance() {
-        measure {
-            let _ = _validator!.validateName(baseName: "test test")
-        }
-    }
-
 }
