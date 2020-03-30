@@ -27,6 +27,7 @@
 		849721A6241F3B490054D6BF /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849721A5241F3B490054D6BF /* PersonListViewController.swift */; };
 		84B59ECD2431ED0800DCC70A /* nonData.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84B59ECC2431ED0800DCC70A /* nonData.gif */; };
 		84B9A81E24247E7A009A702B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9A81D24247E7A009A702B /* Validator.swift */; };
+		84CAD19E2431F9B900C415F1 /* nonData.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84B59ECC2431ED0800DCC70A /* nonData.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CAD19E2431F9B900C415F1 /* nonData.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
