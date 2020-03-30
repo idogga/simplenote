@@ -47,7 +47,7 @@ class Validator {
             return "Возраст дожен быть больше 0."
         }
         if(double! > 200) {
-            return "Слишком большой возраст"
+            return "Слишком большая высота."
         }
         return ""
     }
