@@ -25,9 +25,8 @@
 		8497219F241F35700054D6BF /* PersonDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497219E241F35700054D6BF /* PersonDb.swift */; };
 		849721A4241F39A80054D6BF /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849721A3241F39A80054D6BF /* PersonCell.swift */; };
 		849721A6241F3B490054D6BF /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849721A5241F3B490054D6BF /* PersonListViewController.swift */; };
-		84B59ECD2431ED0800DCC70A /* nonData.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84B59ECC2431ED0800DCC70A /* nonData.gif */; };
 		84B9A81E24247E7A009A702B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9A81D24247E7A009A702B /* Validator.swift */; };
-		84CAD19E2431F9B900C415F1 /* nonData.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84B59ECC2431ED0800DCC70A /* nonData.gif */; };
+		84CAD1A02431FAC600C415F1 /* nonData.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84CAD19F2431FAC600C415F1 /* nonData.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +62,8 @@
 		8497219E241F35700054D6BF /* PersonDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDb.swift; sourceTree = "<group>"; };
 		849721A3241F39A80054D6BF /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		849721A5241F3B490054D6BF /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
-		84B59ECC2431ED0800DCC70A /* nonData.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = nonData.gif; path = ../../Downloads/nonData.gif; sourceTree = SOURCE_ROOT; };
 		84B9A81D24247E7A009A702B /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		84CAD19F2431FAC600C415F1 /* nonData.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = nonData.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +105,7 @@
 		842B20A423F421AE0054B78D /* SimpleNote */ = {
 			isa = PBXGroup;
 			children = (
-				84B59ECC2431ED0800DCC70A /* nonData.gif */,
+				84CAD19F2431FAC600C415F1 /* nonData.gif */,
 				84B9A81C24247E51009A702B /* AddData */,
 				849721A0241F391E0054D6BF /* ListOfData */,
 				8497219D241F355B0054D6BF /* Db */,
@@ -252,7 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B59ECD2431ED0800DCC70A /* nonData.gif in Resources */,
+				84CAD1A02431FAC600C415F1 /* nonData.gif in Resources */,
 				842B20B723F421B00054B78D /* LaunchScreen.storyboard in Resources */,
 				842B20B423F421B00054B78D /* Assets.xcassets in Resources */,
 				842B20AF23F421AE0054B78D /* Main.storyboard in Resources */,
@@ -263,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84CAD19E2431F9B900C415F1 /* nonData.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
