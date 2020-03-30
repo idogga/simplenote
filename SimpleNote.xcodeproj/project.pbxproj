@@ -62,7 +62,7 @@
 		8497219E241F35700054D6BF /* PersonDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDb.swift; sourceTree = "<group>"; };
 		849721A3241F39A80054D6BF /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		849721A5241F3B490054D6BF /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
-		84B59ECC2431ED0800DCC70A /* nonData.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = nonData.gif; path = ../../../Downloads/nonData.gif; sourceTree = "<group>"; };
+		84B59ECC2431ED0800DCC70A /* nonData.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = nonData.gif; path = ../../Downloads/nonData.gif; sourceTree = SOURCE_ROOT; };
 		84B9A81D24247E7A009A702B /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
