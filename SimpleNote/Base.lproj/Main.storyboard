@@ -50,7 +50,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет!" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mYk-WP-e0p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет!" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mYk-WP-e0p">
                                 <rect key="frame" x="0.0" y="54" width="414" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="HNe-tg-nPp"/>
@@ -139,34 +139,37 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="personCell" id="frU-Le-SGB" customClass="PersonCell" customModule="Hello_World_">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="74"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="personCell" rowHeight="95" id="frU-Le-SGB" customClass="PersonCell" customModule="Hello_World_">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="frU-Le-SGB" id="AHx-7G-waE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iin-lE-5Mi">
-                                                    <rect key="frame" x="20" y="19" width="374" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iin-lE-5Mi">
+                                                    <rect key="frame" x="20" y="19" width="374" height="29.5"/>
                                                     <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="175 sm - 10-24-1999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBB-3B-nG3">
-                                                    <rect key="frame" x="20" y="51" width="374" height="19.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="175 sm - 10-24-1999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBB-3B-nG3">
+                                                    <rect key="frame" x="20" y="56.5" width="374" height="19.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="19.5" id="n5Y-Uv-pq6"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="lBB-3B-nG3" secondAttribute="bottom" constant="8" id="7Zl-9N-fbQ"/>
-                                                <constraint firstItem="iin-lE-5Mi" firstAttribute="leading" secondItem="AHx-7G-waE" secondAttribute="leadingMargin" id="J3k-7N-6A6"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="iin-lE-5Mi" secondAttribute="trailing" id="Sk0-mu-QPx"/>
-                                                <constraint firstItem="lBB-3B-nG3" firstAttribute="leading" secondItem="AHx-7G-waE" secondAttribute="leadingMargin" id="So8-rc-Q3f"/>
-                                                <constraint firstItem="iin-lE-5Mi" firstAttribute="top" secondItem="AHx-7G-waE" secondAttribute="topMargin" id="fkB-Mc-17u"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="lBB-3B-nG3" secondAttribute="trailing" id="hUU-sV-12F"/>
-                                                <constraint firstItem="lBB-3B-nG3" firstAttribute="top" secondItem="iin-lE-5Mi" secondAttribute="bottom" id="ziD-OF-6oU"/>
+                                                <constraint firstItem="lBB-3B-nG3" firstAttribute="top" secondItem="iin-lE-5Mi" secondAttribute="bottom" constant="8" id="1tv-v7-YNj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lBB-3B-nG3" secondAttribute="bottom" constant="8" id="2Oi-9u-OA5"/>
+                                                <constraint firstItem="lBB-3B-nG3" firstAttribute="trailing" secondItem="AHx-7G-waE" secondAttribute="trailingMargin" id="K9j-fn-ix2"/>
+                                                <constraint firstItem="iin-lE-5Mi" firstAttribute="top" secondItem="AHx-7G-waE" secondAttribute="topMargin" constant="8" id="TqK-rG-6qd"/>
+                                                <constraint firstItem="iin-lE-5Mi" firstAttribute="leading" secondItem="AHx-7G-waE" secondAttribute="leadingMargin" id="Uzw-b0-jAI"/>
+                                                <constraint firstItem="iin-lE-5Mi" firstAttribute="trailing" secondItem="AHx-7G-waE" secondAttribute="trailingMargin" id="ZpL-JV-gln"/>
+                                                <constraint firstItem="lBB-3B-nG3" firstAttribute="leading" secondItem="AHx-7G-waE" secondAttribute="leadingMargin" id="rh9-kT-o4j"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

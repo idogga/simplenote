@@ -14,6 +14,7 @@
 		842B20B223F421AE0054B78D /* SimpleNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 842B20B023F421AE0054B78D /* SimpleNote.xcdatamodeld */; };
 		842B20B423F421B00054B78D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842B20B323F421B00054B78D /* Assets.xcassets */; };
 		842B20B723F421B00054B78D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B20B523F421B00054B78D /* LaunchScreen.storyboard */; };
+		842F7FC72432D632005AE1DA /* SimpleNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F7FC62432D632005AE1DA /* SimpleNoteUITests.swift */; };
 		848D39E824187C3F00C1A525 /* LoadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D39E724187C3F00C1A525 /* LoadButton.swift */; };
 		848D39EB24187F0100C1A525 /* LoadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D39EA24187F0100C1A525 /* LoadExtension.swift */; };
 		848D39ED24187FAD00C1A525 /* IndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D39EC24187FAD00C1A525 /* IndicatorProtocol.swift */; };
@@ -30,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		842F7FC92432D632005AE1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842B209A23F421AE0054B78D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842B20A123F421AE0054B78D;
+			remoteInfo = SimpleNote;
+		};
 		8495A0362431DD4900F9562B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 842B209A23F421AE0054B78D /* Project object */;
@@ -49,6 +57,9 @@
 		842B20B323F421B00054B78D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842B20B623F421B00054B78D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842B20B823F421B00054B78D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842F7FC42432D632005AE1DA /* SimpleNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		842F7FC62432D632005AE1DA /* SimpleNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNoteUITests.swift; sourceTree = "<group>"; };
+		842F7FC82432D632005AE1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848D39E724187C3F00C1A525 /* LoadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadButton.swift; sourceTree = "<group>"; };
 		848D39EA24187F0100C1A525 /* LoadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadExtension.swift; sourceTree = "<group>"; };
 		848D39EC24187FAD00C1A525 /* IndicatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorProtocol.swift; sourceTree = "<group>"; };
@@ -74,6 +85,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		842F7FC12432D632005AE1DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8495A02E2431DD4900F9562B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +107,7 @@
 			children = (
 				842B20A423F421AE0054B78D /* SimpleNote */,
 				8495A0322431DD4900F9562B /* SimpleNoteTests */,
+				842F7FC52432D632005AE1DA /* SimpleNoteUITests */,
 				842B20A323F421AE0054B78D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +117,7 @@
 			children = (
 				842B20A223F421AE0054B78D /* Hello World!.app */,
 				8495A0312431DD4900F9562B /* SimpleNoteTests.xctest */,
+				842F7FC42432D632005AE1DA /* SimpleNoteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +139,15 @@
 				842B20B023F421AE0054B78D /* SimpleNote.xcdatamodeld */,
 			);
 			path = SimpleNote;
+			sourceTree = "<group>";
+		};
+		842F7FC52432D632005AE1DA /* SimpleNoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				842F7FC62432D632005AE1DA /* SimpleNoteUITests.swift */,
+				842F7FC82432D632005AE1DA /* Info.plist */,
+			);
+			path = SimpleNoteUITests;
 			sourceTree = "<group>";
 		};
 		848D39E624187C2700C1A525 /* Controls */ = {
@@ -190,6 +219,24 @@
 			productReference = 842B20A223F421AE0054B78D /* Hello World!.app */;
 			productType = "com.apple.product-type.application";
 		};
+		842F7FC32432D632005AE1DA /* SimpleNoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842F7FCD2432D632005AE1DA /* Build configuration list for PBXNativeTarget "SimpleNoteUITests" */;
+			buildPhases = (
+				842F7FC02432D632005AE1DA /* Sources */,
+				842F7FC12432D632005AE1DA /* Frameworks */,
+				842F7FC22432D632005AE1DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842F7FCA2432D632005AE1DA /* PBXTargetDependency */,
+			);
+			name = SimpleNoteUITests;
+			productName = SimpleNoteUITests;
+			productReference = 842F7FC42432D632005AE1DA /* SimpleNoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		8495A0302431DD4900F9562B /* SimpleNoteTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8495A03A2431DD4900F9562B /* Build configuration list for PBXNativeTarget "SimpleNoteTests" */;
@@ -221,6 +268,10 @@
 					842B20A123F421AE0054B78D = {
 						CreatedOnToolsVersion = 11.3;
 					};
+					842F7FC32432D632005AE1DA = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 842B20A123F421AE0054B78D;
+					};
 					8495A0302431DD4900F9562B = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 842B20A123F421AE0054B78D;
@@ -242,6 +293,7 @@
 			targets = (
 				842B20A123F421AE0054B78D /* SimpleNote */,
 				8495A0302431DD4900F9562B /* SimpleNoteTests */,
+				842F7FC32432D632005AE1DA /* SimpleNoteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +307,13 @@
 				842B20B723F421B00054B78D /* LaunchScreen.storyboard in Resources */,
 				842B20B423F421B00054B78D /* Assets.xcassets in Resources */,
 				842B20AF23F421AE0054B78D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842F7FC22432D632005AE1DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +349,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		842F7FC02432D632005AE1DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842F7FC72432D632005AE1DA /* SimpleNoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8495A02D2431DD4900F9562B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +368,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		842F7FCA2432D632005AE1DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 842B20A123F421AE0054B78D /* SimpleNote */;
+			targetProxy = 842F7FC92432D632005AE1DA /* PBXContainerItemProxy */;
+		};
 		8495A0372431DD4900F9562B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 842B20A123F421AE0054B78D /* SimpleNote */;
@@ -478,6 +550,44 @@
 			};
 			name = Release;
 		};
+		842F7FCB2432D632005AE1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R3B9N3SY8;
+				INFOPLIST_FILE = SimpleNoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tap.SimpleNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleNote;
+			};
+			name = Debug;
+		};
+		842F7FCC2432D632005AE1DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R3B9N3SY8;
+				INFOPLIST_FILE = SimpleNoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tap.SimpleNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SimpleNote;
+			};
+			name = Release;
+		};
 		8495A0382431DD4900F9562B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -535,6 +645,15 @@
 			buildConfigurations = (
 				842B20BC23F421B00054B78D /* Debug */,
 				842B20BD23F421B00054B78D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842F7FCD2432D632005AE1DA /* Build configuration list for PBXNativeTarget "SimpleNoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842F7FCB2432D632005AE1DA /* Debug */,
+				842F7FCC2432D632005AE1DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

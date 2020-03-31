@@ -43,6 +43,16 @@
                </Test>
             </SkippedTests>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "842F7FC32432D632005AE1DA"
+               BuildableName = "SimpleNoteUITests.xctest"
+               BlueprintName = "SimpleNoteUITests"
+               ReferencedContainer = "container:SimpleNote.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
