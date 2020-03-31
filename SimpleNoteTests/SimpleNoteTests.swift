@@ -50,7 +50,7 @@ class SimpleNoteTests: XCTestCase {
     
     func testUnsuccesLenghtLess(){
         let expect="Высота должна быть больше 50."
-        let s = _validator!.validateLenght(lengthStr: "-1")
+        let s = _validator!.validateLenght(lengthStr: "49")
         XCTAssertEqual(s, expect)
     }
     
