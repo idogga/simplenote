@@ -12,13 +12,17 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var nameText: UITextField!
     
+    @IBOutlet weak var nameErrorLbl: UILabel!
     @IBOutlet weak var lenghtText: UITextField!
     
+    @IBOutlet weak var lenghtErrorLbl: UILabel!
     @IBOutlet weak var loadingBtn: LoadButton!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var ageErrorLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
         loadingBtn.addTarget(self, action: #selector(tapBtn(_:)), for: .touchUpInside)
         lenghtText.delegate=self
         nameText.delegate=self
+        datePicker.locale=Locale.init(identifier: "ru")
+        datePicker.addTarget(self, action: #selector(ageChanged(picker:)), for: .valueChanged)
         datePicker.maximumDate=Date()
     }
     
@@ -100,6 +106,31 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
+    @IBAction func namePrimaryAction(_ sender: Any) {
+        lenghtText.becomeFirstResponder()
+    }
+    
+    @IBAction func nameEditingChanged(_ sender: Any) {
+        let validator=Validator()
+        let validateStr=validator.validateName(baseName: nameText.text!)
+        nameErrorLbl.text=validateStr
+        loadingBtn.isEnabled=checkErrors()
+}
+    
+    @IBAction func lenghtChanged(_ sender: Any) {
+        let validator=Validator()
+        let validateStr=validator.validateLenght(lengthStr: (sender as! UITextField).text!)
+        lenghtErrorLbl.text=validateStr
+        loadingBtn.isEnabled=checkErrors()
+}
+    
+    @objc func ageChanged(picker: UIDatePicker) {
+        let validator=Validator()
+        let validateStr=validator.validateAge(dateOfBirth:  picker.date)
+        ageErrorLbl.text=validateStr
+        loadingBtn.isEnabled=checkErrors()
+}
+    
     private func checkResult(result:String) -> Bool {
         if(!result.isEmpty) {
             showAlert(description: result)
@@ -119,5 +150,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
         lenghtText.text=""
         datePicker.date=Date()
     }
+    
+    private func checkErrors()->Bool{
+        return (nameErrorLbl.text?.isEmpty ?? true)
+            && (lenghtErrorLbl.text?.isEmpty ?? true)
+            && (ageErrorLbl.text?.isEmpty ?? true)
+    }
 }
-
