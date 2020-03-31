@@ -34,6 +34,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
         datePicker.locale=Locale.init(identifier: "ru")
         datePicker.addTarget(self, action: #selector(ageChanged(picker:)), for: .valueChanged)
         datePicker.maximumDate=Date()
+        hideKeyboard()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,6 +46,9 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        if textField==nameText{
+            lenghtText.becomeFirstResponder()
+        }
         return true
     }
     
@@ -67,41 +71,41 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
     }
     
     @objc private func tapBtn(_ sender: LoadButton){
-        if(sender.isLoading) {
-            sender.hideLoader()
-        }
-        else{
+        view.endEditing(true)
+        sender.showLoader(userInteraction: false)
+
+        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
             let validator=Validator()
-            if(!checkResult(result: validator.validateAge(dateOfBirth: datePicker.date))){
+            if(!self.checkResult(result: validator.validateAge(dateOfBirth: self.datePicker.date))){
                 sender.hideLoader()
                 return;
             }
             
-            if(!checkResult(result: validator.validateLenght(lengthStr: lenghtText.text!))) {
-                sender.hideLoader()
-                return;
-            }
-            if(!checkResult(result: validator.validateName(baseName: nameText.text!))) {
+            if(!self.checkResult(result: validator.validateLenght(lengthStr: self.lenghtText.text!))) {
                 sender.hideLoader()
                 return;
             }
             
-            sender.showLoader(userInteraction: true)
+            if(!self.checkResult(result: validator.validateName(baseName: self.nameText.text!))) {
+                sender.hideLoader()
+                return;
+            }
+            
             let person = Person(context: context);
-            person.lenght = Double(lenghtText.text!)!
-            person.name = nameText.text
-            person.age = datePicker.date
+            person.lenght = Double(self.lenghtText.text!)!
+            person.name = self.nameText.text
+            person.age = self.datePicker.date
             
             context.insert(person)
             do {
                 try context.save()
             }
             catch{
-                showAlert(description: error.localizedDescription)
+                self.showAlert(description: error.localizedDescription)
             }
-            clear()
+            self.clear()
             sender.hideLoader()
         }
     }
@@ -115,7 +119,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
         let validateStr=validator.validateName(baseName: nameText.text!)
         nameErrorLbl.text=validateStr
         loadingBtn.isEnabled=checkErrors()
-}
+    }
     
     @IBAction func lenghtChanged(_ sender: Any) {
         let validator=Validator()
@@ -155,5 +159,16 @@ class FirstViewController: UIViewController, UITextFieldDelegate{
         return (nameErrorLbl.text?.isEmpty ?? true)
             && (lenghtErrorLbl.text?.isEmpty ?? true)
             && (ageErrorLbl.text?.isEmpty ?? true)
+    }
+}
+
+extension UIViewController{
+    func hideKeyboard(){
+        let tap=UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
     }
 }

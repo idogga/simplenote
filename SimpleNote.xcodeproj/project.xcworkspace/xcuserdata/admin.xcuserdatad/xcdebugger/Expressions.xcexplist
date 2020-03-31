@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "LoadButton.hideLoader(_:):LoadButton.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.subviews">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "Validator.validateAge(dateOfBirth:):Validator.swift">
          <PersistentStrings>
             <PersistentString
