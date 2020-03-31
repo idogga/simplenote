@@ -49,7 +49,7 @@ class SimpleNoteTests: XCTestCase {
     }
     
     func testUnsuccesLenghtLess(){
-        let expect="Возраст дожен быть больше 0."
+        let expect="Высота должна быть больше 50."
         let s = _validator!.validateLenght(lengthStr: "-1")
         XCTAssertEqual(s, expect)
     }

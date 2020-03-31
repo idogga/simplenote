@@ -43,8 +43,8 @@ class Validator {
         if(double==nil) {
             return "Не является числом."
         }
-        if(double! < 0) {
-            return "Возраст дожен быть больше 0."
+        if(double! < 50) {
+            return "Высота должна быть больше 50."
         }
         if(double! > 200) {
             return "Слишком большая высота."
